@@ -1,57 +1,78 @@
 const negate = a => {
-  // your code here
+  return !a;
 };
 
 const both = (a, b) => {
-  // your code here
+  return a && b;
 };
 
 const either = (a, b) => {
-  // your code here
+  return a || b;
 };
 
 const none = (a, b) => {
-  // your code here
+  return !a && !b;
 };
 
 const one = (a, b) => {
-  // your code here
+  if ((a && !b) || (!a && b)) return true;
+  return false;
 };
 
 const truthiness = a => {
-  // your code here
+  if (a) return true;
+  return false;
 };
 
 const isEqual = (a, b) => {
-  // your code here
+  if (a === b) return true;
+  return false;
 };
 
 const isGreaterThan = (a, b) => {
-  // your code here
+  if (a > b) return true;
+  return false;
 };
 
 const isLessThanOrEqualTo = (a, b) => {
-  // your code here
+  if (a <= b) return true;
+  return false;
 };
 
 const isOdd = a => {
-  // your code here
+  if (a % 2 === 1) return true;
+  return false;
 };
 
 const isEven = a => {
-  // your code here
+  if (a % 2 === 0) return true;
+  return false;
 };
 
 const isSquare = a => {
-  // your code here
+  if (Math.sqrt(a) % 1 === 0) return true;
+  return false;
 };
 
 const startsWith = (char, string) => {
-  // your code here
+  if (string.charAt(0) === char) return true;
+  return false;
 };
 
 const containsVowels = string => {
-  // your code here
+  let isTrue = false;
+  const lowerCaseString = string.toLowerCase();
+  for (let i = 0; i < string.length; i += 1) {
+    if (
+      lowerCaseString.charAt(i) === "a" ||
+      lowerCaseString.charAt(i) === "e" ||
+      lowerCaseString.charAt(i) === "i" ||
+      lowerCaseString.charAt(i) === "o" ||
+      lowerCaseString.charAt(i) === "u"
+    )
+      isTrue = true;
+  }
+  return isTrue;
 };
 
 const isLowerCase = string => {
