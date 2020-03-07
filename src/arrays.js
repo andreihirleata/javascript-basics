@@ -1,61 +1,100 @@
 const getNthElement = (index, array) => {
-  // your code here
+  if (index >= array.length) return array[index % array.length];
+  return array[index];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.join();
 };
 
 const csvStringToArray = string => {
-  // your code here
+  const result = string.split(`,`);
+  return result;
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  const secondArray = array.push(element);
+  return secondArray;
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  return numbers.map(number => number.toString());
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(string => string.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings.map(string =>
+    string
+      .split("")
+      .reverse()
+      .join("")
+  );
 };
 
 const onlyEven = numbers => {
-  // your code here
+  return numbers.filter(number => number % 2 === 0);
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  const secondArray = array;
+  return secondArray.splice(index, 1);
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  return (
+    strings
+      // .map(string => string.toLowerCase()) ??? should work
+      .filter(
+        string =>
+          string.charAt(0) === `a` ||
+          string.charAt(0) === `e` ||
+          string.charAt(0) === `i` ||
+          string.charAt(0) === `o` ||
+          string.charAt(0) === `u` ||
+          string.charAt(0) === `A` ||
+          string.charAt(0) === `E` ||
+          string.charAt(0) === `I` ||
+          string.charAt(0) === `O` ||
+          string.charAt(0) === `U`
+      )
+  );
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.replace(/\s/g, "");
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  return numbers.reduce(reducer);
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  return strings
+    .map(string =>
+      string
+        .split("")
+        .reverse()
+        .join("")
+    )
+    .sort()
+    .map(string =>
+      string
+        .split("")
+        .reverse()
+        .join("")
+    );
 };
 
 module.exports = {
