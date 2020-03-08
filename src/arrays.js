@@ -17,7 +17,7 @@ const addToArray = (element, array) => {
 };
 
 const addToArray2 = (element, array) => {
-  const secondArray = array.push(element);
+  const secondArray = array.concat(element);
   return secondArray;
 };
 
@@ -47,8 +47,7 @@ const onlyEven = numbers => {
 };
 
 const removeNthElement2 = (index, array) => {
-  const secondArray = array;
-  return secondArray.splice(index, 1);
+  return array.slice(0, index).concat(array.slice(index + 1));
 };
 
 const elementsStartingWithAVowel = strings => {
